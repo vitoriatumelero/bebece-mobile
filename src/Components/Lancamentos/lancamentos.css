@@ -1,0 +1,68 @@
+/* Seção Lançamentos */
+.lancamentos {
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* Espaçamento interno */
+}
+
+.lancamentos p {
+  font-size: 1.8rem; /* Tamanho do título */
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Contêiner de peças com rolagem horizontal */
+.lancamentos-peças {
+  display: flex;
+  overflow-x: auto; /* Habilita rolagem horizontal */
+  gap: 30px; /* Espaçamento maior entre os itens */
+  padding: 10px 0; /* Espaçamento interno */
+  scroll-snap-type: x mandatory; /* Suporte a scroll snap */
+}
+
+.lancamentos-peças::-webkit-scrollbar {
+  display: none; /* Oculta a barra de rolagem */
+}
+
+/* Cada peça */
+.lancamentos-peças .peças {
+  flex: 0 0 auto; /* Garante que os itens fiquem em linha */
+  width: 250px; /* Maior largura para os itens */
+  text-align: center; /* Centraliza o texto */
+  scroll-snap-align: center; /* Alinha ao centro durante a rolagem */
+}
+
+.lancamentos-peças img {
+  width: 100%;
+  height: auto;
+}
+
+/* Nome e preços */
+.lancamentos-peças .peças p {
+  font-size: 1.1rem; /* Nome do produto maior */
+  color: #1D1D1D;
+  margin-top: 10px;
+}
+
+.lancamentos-peças .peças-preços-novos {
+  font-size: 1.2rem; /* Destaque para o preço novo */
+  color: #b11b26; /* Cor destacada */
+  font-weight: bold;
+}
+
+.lancamentos-peças .peças-preços-velhos {
+  font-size: 0.9rem; /* Tamanho ajustado para o preço antigo */
+  color: #888;
+  text-decoration: line-through;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .lancamentos {
+    padding: 10px; /* Reduz o espaçamento interno no mobile */
+  }
+
+  .lancamentos-peças .peças {
+    width: 200px; /* Ajusta o tamanho dos itens para telas menores */
+  }
+}

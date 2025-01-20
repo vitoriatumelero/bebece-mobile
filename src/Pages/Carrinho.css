@@ -1,0 +1,56 @@
+.carrinho {
+    padding: 20px;
+  }
+  
+  .carrinho-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .carrinho-item img {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .carrinho-total {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .carrinho-total button {
+    background: #b11b26;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .carrinho {
+    padding: 20px;
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #b11b26;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .close-button:hover {
+    background: #8f1720;
+  }
+  

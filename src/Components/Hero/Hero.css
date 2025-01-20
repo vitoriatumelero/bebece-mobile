@@ -1,0 +1,58 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover; /* Ajusta para preencher toda a área */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh + 60px); /* Combina altura do hero e da navbar */
+  position: relative;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+.hero-button-container {
+  position: absolute;
+  bottom: 80px;
+  z-index: 10;
+}
+
+.hero-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.hero-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 40px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #ffffff;
+}

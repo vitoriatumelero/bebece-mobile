@@ -1,0 +1,97 @@
+/* Homepage Wrapper */
+.homepage {
+  padding: 10px;
+  background-color: #fff8f4; /* Cor de fundo leve */
+}
+
+/* Categorias */
+.categorias {
+  margin-bottom: 40px;
+}
+
+/* Categorias */
+/* Categorias */
+.categorias-grid {
+  display: flex;
+  overflow-x: auto; /* Permite rolagem horizontal */
+  gap: 20px; /* Aumenta o espaço entre os itens */
+  padding: 0 10px;
+}
+
+.categorias-grid::-webkit-scrollbar {
+  display: none; /* Oculta a barra de rolagem */
+}
+
+.categoria-item {
+  flex: 0 0 70%; /* Reduz o tamanho dos itens */
+  max-width: 200px; /* Limita a largura máxima */
+  text-align: center;
+}
+
+.categoria-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* Arredonda as bordas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+  transition: transform 0.3s ease; /* Animação para efeito ao passar o mouse */
+}
+
+.categoria-item img:hover {
+  transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+}
+
+.categoria-item a {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: none;
+  text-align: center;
+}
+
+.categoria-item a:hover {
+  color: #000; /* Muda a cor do texto ao passar o mouse */
+}
+
+
+/* Hero Section */
+.home-container {
+  display: flex;
+  flex-direction: column; /* Alinha as imagens verticalmente */
+  gap: 0; /* Remove o espaço entre as imagens */
+}
+
+.home-image img,
+.model-image img {
+  width: 100%; /* Ocupa toda a largura do contêiner */
+  height: auto; /* Mantém a proporção */
+  max-width: none; /* Remove a limitação de largura */
+  margin: 0; /* Remove margens externas */
+}
+
+/* Ajuste para telas maiores */
+@media (min-width: 768px) {
+  .home-image img,
+  .model-image img {
+    max-width: 600px; /* Limita o tamanho máximo para telas maiores */
+    margin: 0 auto; /* Centraliza em telas maiores */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .categorias-grid, .lancamentos-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+      flex-direction: column;
+  }
+}
+.nome-cat{
+  color: #000000; /* Cor do link, ajuste conforme necessário */
+  text-decoration: none;
+  text-align: left;
+  font-size: 0.8rem;
+  
+}

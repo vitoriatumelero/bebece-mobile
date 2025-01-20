@@ -1,0 +1,115 @@
+/* Estilo geral da navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 100; /* Reduzido quando o menu lateral estiver aberto */
+  transition: z-index 0.3s ease;
+}
+
+/* Quando o menu lateral está aberto, a navbar ficará por baixo */
+.navbar.menu-open {
+  z-index: 50;
+}
+
+/* Menu lateral */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0; /* Para abrir no lado esquerdo */
+  width: 300px; /* Largura fixa do menu */
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); /* Sombra à direita do menu */
+  z-index: 200; /* Garante que fique acima da navbar */
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%); /* Escondido inicialmente */
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Evita que elementos "escapem" do menu */
+}
+/* Quando o menu lateral está aberto */
+.side-menu.open {
+  transform: translateX(0); /* Mostra o menu lateral */
+}
+
+/* Navbar com ícones no lado direito */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 20px; /* Ajusta a posição */
+}
+.close-menu {
+  align-self: flex-end;
+  margin: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/* Imagem no menu lateral */
+.menu-image {
+  width: 100%; /* Largura total do menu */
+  height: auto;
+}
+/* Logo preta no topo */
+.menu-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100px; /* Tamanho da logo */
+  z-index: 5; /* Fica acima da imagem */
+}
+/* Lista de itens no menu */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0; /* Espaçamento abaixo da imagem */
+  text-align: left;
+}
+
+.menu-list li {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin: 15px 20px; /* Espaçamento entre os itens */
+  cursor: pointer;
+}
+/* Botão do menu hambúrguer */
+.hamburger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger-menu img {
+  width: 20px; /* Ajuste para o tamanho correto */
+  height: 20px;
+}
+/* Estilo para o contador do carrinho */
+.nav-cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px; /* Ajuste de posição vertical */
+  right: -10px; /* Ajuste de posição horizontal */
+  background-color: #ff0000; /* Cor de fundo do contador (vermelho) */
+  color: #fff; /* Cor do texto */
+  font-size: 12px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  border-radius: 50%; /* Formato circular */
+  padding: 4px 6px; /* Espaçamento interno */
+  min-width: 20px; /* Largura mínima */
+  text-align: center; /* Centraliza o número */
+  display: none; /* Esconde quando não há itens */
+}
+
+.cart-count.show {
+  display: block; /* Mostra quando há itens */
+}

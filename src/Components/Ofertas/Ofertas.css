@@ -1,0 +1,79 @@
+.ofertas {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #fefefe;
+  text-align: center;
+}
+
+.ofertas-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center; /* Centraliza o título */
+}
+
+.ofertas-subtitle {
+  font-size: 0.9rem;
+  color: #8A8A8A;
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza o subtítulo */
+  font-style: italic;
+}
+
+.ofertas-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px; /* Limita a largura máxima */
+  margin: 0 auto; /* Centraliza no contêiner */
+  text-align: center;
+}
+
+.ofertas-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Adiciona cantos arredondados */
+  object-fit: cover;
+}
+
+.ofertas-item-title {
+  font-size: 1.2rem;
+  color: #1D1D1D;
+  margin: 15px 0 10px;
+}
+
+.ofertas-item-subtitle {
+  font-size: 0.9rem;
+  color: #8A8A8A;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.saiba-mais {
+  color: #000000;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.navigation-dots {
+  display: flex;
+  justify-content: center; /* Centraliza as bolinhas */
+  gap: 10px; /* Espaçamento entre as bolinhas */
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #000; /* Cor para a bolinha ativa */
+}

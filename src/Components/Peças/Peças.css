@@ -1,0 +1,159 @@
+.peças {
+    position: relative;
+  }
+  
+  .peças .cart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .peças .cart-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .peças img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .peças p {
+    font-size: 1rem;
+    color: #1d1d1d;
+  }
+  
+  .peças-preços {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .peças-preços-novos {
+    font-size: 0.9rem;
+    color: #1d1d1d;
+  }
+  
+  .peças-preços-velhos {
+    color: #333;
+    text-decoration: line-through;
+    font-size: 0.85rem;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Certifique-se de que está acima de outros elementos */
+  }
+  
+  .modal-horizontal {
+    display: flex;
+    flex-direction: row; /* Define o layout horizontal */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 800px;
+    max-width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .modal-image-container {
+    flex: 1;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .modal-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .modal-details {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .modal-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .size-option {
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .size-option:hover {
+    background: #ddd;
+  }
+  
+  .add-to-cart {
+    background: #b11b26;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333; /* Cor do X */
+    z-index: 10000; /* Garantir que fique acima de todos os elementos */
+  }
+  
+  .close-modal:hover {
+    color: #b11b26; /* Cor no hover */
+    transform: scale(1.2); /* Efeito de ampliação no hover */
+  }
+  
