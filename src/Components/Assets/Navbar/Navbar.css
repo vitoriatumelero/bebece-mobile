@@ -1,20 +1,30 @@
-/* Estilo geral da navbar */
+/* Navbar fixa no topo e limitada ao tamanho do #root */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 50%; /* Move para o centro horizontal */
+  transform: translateX(-50%); /* Alinha no centro */
+  width: 100%; /* Ocupa toda a largura do #root */
+  max-width: 375px; /* Não ultrapassa o tamanho do layout */
+  height: 60px; /* Altura fixa da navbar */
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  padding: 0 20px;
-  background-color: transparent;
-  position: fixed;
-  width: 100%;
-  z-index: 100; /* Reduzido quando o menu lateral estiver aberto */
-  transition: z-index 0.3s ease;
+  padding: 0 15px;
+  color: white;
+  z-index: 100; /* Garante que fique sobre o restante */
 }
 
-/* Quando o menu lateral está aberto, a navbar ficará por baixo */
-.navbar.menu-open {
-  z-index: 50;
+/* Adiciona espaço no conteúdo abaixo da navbar */
+.content {
+  margin-top: 60px; /* Mesma altura da navbar */
+}
+
+/* Centraliza a navbar no desktop */
+body {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo no desktop */
 }
 
 /* Menu lateral */
@@ -23,14 +33,14 @@
   top: 0;
   left: 0; /* Para abrir no lado esquerdo */
   width: 300px; /* Largura fixa do menu */
-  height: 100%;
+  height: 100vh; /* Garante que ocupe toda a altura da tela */
+
   background-color: #fff;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); /* Sombra à direita do menu */
   z-index: 200; /* Garante que fique acima da navbar */
   display: flex;
   flex-direction: column;
-  transform: translateX(-100%); /* Escondido inicialmente */
-  transition: transform 0.3s ease;
+  transform: translateX(-300%); /* Escondido inicialmente */
   overflow: hidden; /* Evita que elementos "escapem" do menu */
 }
 /* Quando o menu lateral está aberto */
@@ -113,3 +123,54 @@
 .cart-count.show {
   display: block; /* Mostra quando há itens */
 }
+/* Submenu de Produtos */
+.submenu {
+  position: fixed;
+  top: 0;
+  left: 300px; /* Aparece ao lado da sidebar */
+  width: 300px; /* Mesma largura da sidebar */
+  height: 100%;
+  background-color: #f9f9f9;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%); /* Escondido inicialmente */
+  transition: transform 0.3s ease;
+  z-index: 250;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Quando o submenu está aberto */
+.submenu.open {
+  transform: translateX(0);
+}
+
+/* Botão de voltar no submenu */
+.close-submenu {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Lista do submenu */
+.submenu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.submenu-list li {
+  font-size: 1rem;
+  color: #333;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.submenu-list li:hover {
+  color: #ff0000; /* Cor de destaque ao passar o mouse */
+}
+
