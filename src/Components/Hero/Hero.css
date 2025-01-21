@@ -3,10 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-size: cover; /* Ajusta para preencher toda a área */
+  background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
-  height: calc(100vh + 60px); /* Combina altura do hero e da navbar */
+  height: calc(100vh + 60px); 
   position: relative;
   margin-bottom: 0;
   box-sizing: border-box;

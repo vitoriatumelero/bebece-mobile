@@ -26,7 +26,9 @@ const Navbar = () => {
       <button className="hamburger-menu" onClick={() => setIsMenuOpen(true)}>
         <img src={menuHamburguer} alt="Abrir Menu" />
       </button>
-
+      <div className="nav-search">
+        <img src={searchIcon} alt="Pesquisa" className="nav-icon" />
+</div>
       {/* Logo no centro */}
       <div className="nav-logo">
         <img src={logobranco} alt="Logo Bebecê" />
@@ -34,7 +36,6 @@ const Navbar = () => {
 
        {/* Right Icons */}
        <div className="nav-right">
-        <img src={searchIcon} alt="Pesquisa" className="nav-icon" />
         <Link to="/perfil">
           <img src={profileIcon} alt="Perfil" className="nav-icon" />
         </Link>

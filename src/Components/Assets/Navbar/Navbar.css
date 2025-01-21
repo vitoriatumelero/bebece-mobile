@@ -1,47 +1,49 @@
-/* Navbar fixa no topo e limitada ao tamanho do #root */
+
 .navbar {
   position: fixed;
   top: 0;
-  left: 50%; /* Move para o centro horizontal */
-  transform: translateX(-50%); /* Alinha no centro */
-  width: 100%; /* Ocupa toda a largura do #root */
-  max-width: 375px; /* Não ultrapassa o tamanho do layout */
-  height: 60px; /* Altura fixa da navbar */
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 100%; 
+  max-width: 375px; 
+  height: 60px; 
   background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 15px;
   color: white;
-  z-index: 100; /* Garante que fique sobre o restante */
+  z-index: 500;  
+}
+.nav-logo img{
+  align-items: center;
+  
 }
 
-/* Adiciona espaço no conteúdo abaixo da navbar */
 .content {
-  margin-top: 60px; /* Mesma altura da navbar */
+  margin-top: 60px; 
 }
 
-/* Centraliza a navbar no desktop */
 body {
   display: flex;
-  justify-content: center; /* Centraliza o conteúdo no desktop */
+  justify-content: center; 
 }
 
 /* Menu lateral */
 .side-menu {
   position: fixed;
   top: 0;
-  left: 0; /* Para abrir no lado esquerdo */
-  width: 300px; /* Largura fixa do menu */
-  height: 100vh; /* Garante que ocupe toda a altura da tela */
+  left: 0; 
+  width: 300px; 
+  height: 100vh; 
 
   background-color: #fff;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); /* Sombra à direita do menu */
-  z-index: 200; /* Garante que fique acima da navbar */
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); 
+  z-index: 200; 
   display: flex;
   flex-direction: column;
-  transform: translateX(-300%); /* Escondido inicialmente */
-  overflow: hidden; /* Evita que elementos "escapem" do menu */
+  transform: translateX(-300%); 
+  overflow: hidden; 
 }
 /* Quando o menu lateral está aberto */
 .side-menu.open {
@@ -53,7 +55,7 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding-right: 20px; /* Ajusta a posição */
+  padding-right: 20px; 
 }
 .close-menu {
   align-self: flex-end;
@@ -64,7 +66,7 @@ body {
 }
 /* Imagem no menu lateral */
 .menu-image {
-  width: 100%; /* Largura total do menu */
+  width: 100%; 
   height: auto;
 }
 /* Logo preta no topo */
@@ -72,14 +74,14 @@ body {
   position: absolute;
   top: 10px;
   left: 10px;
-  width: 100px; /* Tamanho da logo */
-  z-index: 5; /* Fica acima da imagem */
+  width: 100px; 
+  z-index: 5; 
 }
 /* Lista de itens no menu */
 .menu-list {
   list-style: none;
   padding: 0;
-  margin: 20px 0 0; /* Espaçamento abaixo da imagem */
+  margin: 20px 0 0; 
   text-align: left;
 }
 
@@ -87,7 +89,7 @@ body {
   font-size: 1rem;
   font-weight: 500;
   color: #333;
-  margin: 15px 20px; /* Espaçamento entre os itens */
+  margin: 15px 20px;
   cursor: pointer;
 }
 /* Botão do menu hambúrguer */
@@ -97,42 +99,42 @@ body {
   cursor: pointer;
 }
 .hamburger-menu img {
-  width: 20px; /* Ajuste para o tamanho correto */
+  width: 20px; 
   height: 20px;
 }
-/* Estilo para o contador do carrinho */
+
 .nav-cart {
   position: relative;
 }
 
 .cart-count {
   position: absolute;
-  top: -5px; /* Ajuste de posição vertical */
-  right: -10px; /* Ajuste de posição horizontal */
-  background-color: #ff0000; /* Cor de fundo do contador (vermelho) */
-  color: #fff; /* Cor do texto */
-  font-size: 12px; /* Tamanho da fonte */
-  font-weight: bold; /* Negrito */
-  border-radius: 50%; /* Formato circular */
-  padding: 4px 6px; /* Espaçamento interno */
-  min-width: 20px; /* Largura mínima */
-  text-align: center; /* Centraliza o número */
-  display: none; /* Esconde quando não há itens */
+  top: -5px; 
+  right: -10px; 
+  background-color: #ff0000; 
+  color: #fff; 
+  font-size: 12px; 
+  font-weight: bold; 
+  border-radius: 50%; 
+  padding: 4px 6px; 
+  min-width: 20px; 
+  text-align: center; 
+  display: none; 
 }
 
 .cart-count.show {
-  display: block; /* Mostra quando há itens */
+  display: block; 
 }
 /* Submenu de Produtos */
 .submenu {
   position: fixed;
   top: 0;
-  left: 300px; /* Aparece ao lado da sidebar */
-  width: 300px; /* Mesma largura da sidebar */
+  left: 300px; 
+  width: 300px; 
   height: 100%;
   background-color: #f9f9f9;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
-  transform: translateX(100%); /* Escondido inicialmente */
+  transform: translateX(100%); 
   transition: transform 0.3s ease;
   z-index: 250;
   display: flex;
@@ -171,6 +173,6 @@ body {
 }
 
 .submenu-list li:hover {
-  color: #ff0000; /* Cor de destaque ao passar o mouse */
+  color: #ff0000; 
 }
 

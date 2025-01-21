@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  width: 100%; /* Garante que a largura seja igual à tela */
-  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
-  padding: 0 15px; /* Adiciona espaçamento interno para evitar que encoste nas bordas */
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 0 15px; 
 }
 
 /* Seção Salmão */
@@ -15,10 +15,10 @@
   text-align: center;
   border-radius: 8px;
   display: flex;
-  flex-direction: column; /* Coloca os elementos em coluna para evitar overflow */
+  flex-direction: column; 
   align-items: center;
   gap: 10px;
-  width: 100%; /* Garante que o container se ajuste à largura do dispositivo */
+  width: 100%; 
   box-sizing: border-box;
 }
 
@@ -31,17 +31,17 @@
 
 .newsletter-input {
   display: flex;
-  flex-direction: column; /* Coloca o input e botão em coluna para telas pequenas */
-  align-items: stretch; /* Faz com que ocupem toda a largura disponível */
+  flex-direction: column; 
+  align-items: stretch; 
   gap: 10px;
-  width: 100%; /* Adapta ao tamanho do container */
+  width: 100%;
 }
 
 .newsletter-input input,
 .newsletter-input button {
   padding: 8px;
-  width: 100%; /* Adapta a largura ao container */
-  max-width: none; /* Remove qualquer largura máxima */
+  width: 100%; 
+  max-width: none;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -68,15 +68,15 @@ body {
   background-color: #b11b26;
   padding: 60px 15px;
   display: flex;
-  flex-direction: column; /* Para telas pequenas */
+  flex-direction: column; 
   text-align: center;
   color: #fff;
   gap: 20px;
 }
 
 .footer-logo img {
-  max-width: 100%; /* Ajusta automaticamente para a largura do container */
-  height: auto; /* Mantém a proporção da imagem */
+  max-width: 100%; 
+  height: auto; 
   margin: 0 ;
 }
 

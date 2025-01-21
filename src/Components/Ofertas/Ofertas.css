@@ -9,14 +9,14 @@
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 10px;
-  text-align: center; /* Centraliza o título */
+  text-align: center; 
 }
 
 .ofertas-subtitle {
   font-size: 0.9rem;
   color: #8A8A8A;
   margin-bottom: 20px;
-  text-align: center; /* Centraliza o subtítulo */
+  text-align: center;
   font-style: italic;
 }
 
@@ -25,15 +25,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 600px; /* Limita a largura máxima */
-  margin: 0 auto; /* Centraliza no contêiner */
+  max-width: 600px; 
+  margin: 0 auto; 
   text-align: center;
 }
 
 .ofertas-item img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px; /* Adiciona cantos arredondados */
+  border-radius: 8px; 
   object-fit: cover;
 }
 
@@ -60,8 +60,8 @@
 
 .navigation-dots {
   display: flex;
-  justify-content: center; /* Centraliza as bolinhas */
-  gap: 10px; /* Espaçamento entre as bolinhas */
+  justify-content: center; 
+  gap: 10px; 
   margin-top: 20px;
 }
 
@@ -75,5 +75,5 @@
 }
 
 .dot.active {
-  background-color: #000; /* Cor para a bolinha ativa */
+  background-color: #000; 
 }

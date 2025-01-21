@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <div
       className="hero"
-      style={{ backgroundImage: `url(${images[currentImage]})` }} // Define a imagem como fundo
+      style={{ backgroundImage: `url(${images[currentImage]})` }} 
     >
       <div className="hero-button-container">
         <button className="hero-button">Confira agora</button>
