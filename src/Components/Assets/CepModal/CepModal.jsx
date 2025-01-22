@@ -9,7 +9,7 @@ const CepModal = ({ isOpen, onClose, onSave }) => {
   const handleSave = () => {
     if (cep && cidade && estado) {
       const location = `${cidade}, ${estado}`;
-      onSave(location); // Certifique-se de que "onSave" está correto
+      onSave(location); 
       onClose();
     } else {
       alert('Preencha todos os campos obrigatórios!');

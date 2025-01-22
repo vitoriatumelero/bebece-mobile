@@ -11,26 +11,26 @@ import LocationBar from './Components/Assets/LocationBar/LocationBar';
 const AppContent = () => {
   const location = useLocation();
   const [isCepModalOpen, setIsCepModalOpen] = useState(false);
-  const [userLocation, setUserLocation] = useState(null); // Estado para a localização do usuário
+  const [userLocation, setUserLocation] = useState(null); 
 
   useEffect(() => {
-    // Exibir o modal apenas na primeira visita
+    
     const savedCep = localStorage.getItem('cep');
     if (!savedCep) {
       setIsCepModalOpen(true);
     } else {
-      setUserLocation(savedCep); // Configurar a localização com o CEP salvo
+      setUserLocation(savedCep); 
     }
   }, []);
 
   const handleSaveLocation = (location) => {
     localStorage.setItem('cep', location);
-    setIsCepModalOpen(false); // Fecha o modal
+    setIsCepModalOpen(false); 
   };
   
 
   const handleChangeLocation = () => {
-    setIsCepModalOpen(true); // Reabrir o modal
+    setIsCepModalOpen(true); 
   };
 
   return (
