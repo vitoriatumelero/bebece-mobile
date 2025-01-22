@@ -1,49 +1,52 @@
-# Instruções para Desenvolvimento
+# **Bebecê E-commerce**
 
-Este projeto requer a recriação de uma página mobile baseada em um design fornecido no Figma. A pessoa responsável por este teste deve utilizar o arquivo fornecido no projeto para desenvolver a página conforme as especificações do design.
-
-**Deixamos o ambiente parametrizado para desenvolvimento em React JS, mas caso se sinta mais confortável em desenvolver utilizando HMTL, CSS e JS poderá trabalhar desta forma criando a organizção das pastas. Desenvolver em React JS será apenas considerado um diferencial**
+Bem-vindo ao repositório do projeto Bebecê E-commerce! Este projeto é uma plataforma elegante para a venda de calçados femininos, com foco em usabilidade, design moderno e interatividade. Este README fornece uma visão geral do projeto, tecnologias usadas e como executá-lo localmente. Lembre-se de clicar no link do Vercel para observar o projeto.
 
 
-## Datas e formulário
+## *Visão Geral do Projeto*
 
-* Para ser considerada a entrega e termos acesso ao repositório é necessário que você preencha esse formulário: [link](https://forms.gle/mGWLKX6WiHi9691o9)
-* O projeto deve ser entregue até o dia **22/01 às 17h**
+O Bebecê E-commerce foi desenvolvido com o objetivo de transformar um design no Figma em uma página mobile . A aplicação conta com:
 
-### Figma Design
-O design a ser seguido está disponível no Figma no seguinte [link](https://www.figma.com/design/EjPsqBt4o5yktKvks0f072/[Wecode]-Vaga-Desenvolvedor-J%C3%BAnior?node-id=3006-1347&t=0G4hjFDhmnEiECiD-0)
+Uma navbar dinâmica com menu de categorias interativas e barra de navegação fluida.
 
+Seção de lançamentos de produtos, exibindo cards de calçados com imagem, nome e preço.
 
-### Ferramentas Utilizadas
+Modal interativo para seleção de tamanhos e adição de produtos ao carrinho.
 
-* React: O projeto deve ser desenvolvido utilizando React.
-* SCSS: Utilize SCSS para estilização dos componentes.
-
-### Estrutura do Projeto
-
-O projeto está estruturado da seguinte forma:
-
-* `src/`: Diretório contendo o código fonte do projeto.
-* `public/`: Diretório contendo arquivos estáticos como imagens. 
-* `README.md`: Este arquivo contendo as instruções para desenvolvimento.
-
-## Como Começar
-
-* Extraia este projeto para um diretório local.
-* Navegue até o diretório do projeto.
-* Instale as dependências do projeto utilizando `npm install`.
-* Execute o projeto localmente com `npm start`.
-
-## Desenvolvimento
-* Utilize o arquivo fornecido no projeto como referência para criar a página mobile.
-* Siga fielmente as especificações de design presentes no Figma.
-* Utilize SCSS para estilização dos componentes.
-* Mantenha o código limpo e bem organizado, seguindo as melhores práticas de desenvolvimento.
-
-### Slider
-
-Para o componente slider, você poderá utilizar a biblioteca que quiser. Sugerimos a utilização da biblioteca [react-slick](https://react-slick.neostack.com/).
-
-Para a composição do card de produtos no slider, deverá ser utilizado as informações retornantes da função `getProducts` presente no arquivo `/src/utils.js`.
+Sistema de carrinho de compras, com contagem dinâmica de itens e resumo de compras.
 
 
+### *Tecnologias Utilizadas*
+
+React.js: Para a construção de interfaces dinâmicas e reutilizáveis.
+
+CSS e SCSS: Estilização responsiva e personalizada.
+
+JavaScript: Lógica de adição ao carrinho e manipulações de estado.
+
+
+Como Executar o Projeto Localmente
+
+- Clone o Repositório
+
+https://github.com/vitoriatumelero/bebece-mobile
+
+- Instale as Dependências
+
+cd bebece-mobile
+npm install
+
+- Execute o Projeto
+
+npm start
+
+Abra http://localhost:3000 para visualizar no navegador.
+
+
+### *Agradecimentos*
+
+Agradeço à equipe da **We Code** por me proporcionar a oportunidade de realizar este trabalho. Foi uma experiência enriquecedora, onde aprendi muito durante todo o processo de desenvolvimento. Sinto-me orgulhosa do resultado final e espero que tenham gostado do projeto.  
+
+Espero também que este trabalho tenha demonstrado como posso contribuir para a equipe e agregar valor à empresa.  
+
+Sinta-se à vontade para contribuir ou deixar um feedback!
