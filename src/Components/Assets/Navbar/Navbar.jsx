@@ -36,9 +36,9 @@ const Navbar = () => {
 
       {/* Right Icons */}
       <div className="nav-right">
-        <Link to="/perfil">
+          <a href="https://www.linkedin.com/in/vitoriatumelero" target="_blank" rel="noopener noreferrer">
           <img src={profileIcon} alt="Perfil" className="nav-icon" />
-        </Link>
+          </a>
         <Link to="/carrinho">
           <div className="nav-cart">
             <img src={cartIcon} alt="Carrinho" className="nav-icon" />
