@@ -15,7 +15,7 @@ const HomePage = () => {
     <div className="homepage">
       {/* Categorias */}
       <div className="categorias">
-        <h2>Categorias</h2>
+        <p>Categorias</p>
         <div className="categorias-grid">
           <div className="categoria-item">
             <img src={botaImage} alt="Bota" />

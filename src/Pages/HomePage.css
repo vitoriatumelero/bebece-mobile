@@ -1,43 +1,43 @@
-/* Homepage Wrapper */
+
 .homepage {
   padding: 10px;
-  background-color: #fff8f4; /* Cor de fundo leve */
+  background-color: #fff8f4; 
 }
 
-/* Categorias */
-.categorias {
-  margin-bottom: 40px;
+.categorias p {
+  font-size: 1.2rem; 
+  color: #333;
+  margin-bottom: 20px;
 }
 
-/* Categorias */
-/* Categorias */
 .categorias-grid {
+  margin-top: 10px;
   display: flex;
-  overflow-x: auto; /* Permite rolagem horizontal */
-  gap: 20px; /* Aumenta o espaço entre os itens */
+  overflow-x: auto; 
+  gap: 20px; 
   padding: 0 10px;
 }
 
 .categorias-grid::-webkit-scrollbar {
-  display: none; /* Oculta a barra de rolagem */
+  display: none; 
 }
 
 .categoria-item {
-  flex: 0 0 70%; /* Reduz o tamanho dos itens */
-  max-width: 200px; /* Limita a largura máxima */
+  flex: 0 0 70%;
+  max-width: 200px; 
   text-align: center;
 }
 
 .categoria-item img {
   width: 100%;
   height: auto;
-  border-radius: 12px; /* Arredonda as bordas */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
-  transition: transform 0.3s ease; /* Animação para efeito ao passar o mouse */
+  border-radius: 12px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease; 
 }
 
 .categoria-item img:hover {
-  transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+  transform: scale(1.05); 
 }
 
 .categoria-item a {
@@ -50,31 +50,31 @@
 }
 
 .categoria-item a:hover {
-  color: #000; /* Muda a cor do texto ao passar o mouse */
+  color: #000; 
 }
 
 
 /* Hero Section */
 .home-container {
   display: flex;
-  flex-direction: column; /* Alinha as imagens verticalmente */
-  gap: 0; /* Remove o espaço entre as imagens */
+  flex-direction: column; 
+  gap: 0; 
 }
 
 .home-image img,
 .model-image img {
-  width: 100%; /* Ocupa toda a largura do contêiner */
-  height: auto; /* Mantém a proporção */
-  max-width: none; /* Remove a limitação de largura */
-  margin: 0; /* Remove margens externas */
+  width: 100%; 
+  height: auto; 
+  max-width: none; 
+  margin: 0; 
 }
 
-/* Ajuste para telas maiores */
+
 @media (min-width: 768px) {
   .home-image img,
   .model-image img {
-    max-width: 600px; /* Limita o tamanho máximo para telas maiores */
-    margin: 0 auto; /* Centraliza em telas maiores */
+    max-width: 600px; 
+    margin: 0 auto; 
   }
 }
 
@@ -89,7 +89,7 @@
   }
 }
 .nome-cat{
-  color: #000000; /* Cor do link, ajuste conforme necessário */
+  color: #000000; 
   text-decoration: none;
   text-align: left;
   font-size: 0.8rem;
