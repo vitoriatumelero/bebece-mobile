@@ -1,5 +1,6 @@
 .carrinho {
     padding: 20px;
+    margin-top: 40px;
   }
   
   .carrinho-item {
@@ -22,10 +23,11 @@
   .carrinho-total button {
     background: #b11b26;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+
   }
   .carrinho {
     padding: 20px;

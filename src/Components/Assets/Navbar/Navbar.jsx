@@ -2,23 +2,23 @@ import React, { useState, useContext } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../../Context/CartContext";
-
-
-
 import menuHamburguer from "../Assets/menu-hamburguer.png";
 import closeIcon from "../Assets/close-icon.png";
 import cartIcon from "../Assets/icone-carrinho.png";
 import profileIcon from "../Assets/icone-conta.png";
 import searchIcon from "../Assets/icone-search.png";
-import logobranco from '../Assets/logo-branco.png';
-import logopreta from '../Assets/logo-preto.png';
-import imgmenu from '../Assets/fundo-menu.png'
-
+import logobranco from "../Assets/logo-branco.png";
+import logopreta from "../Assets/logo-preto.png";
+import imgmenu from "../Assets/fundo-menu.png";
 
 const Navbar = () => {
   const { cartItems } = useContext(CartContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [hoveredCategory, setHoveredCategory] = useState(null);
+  const [expandedCategory, setExpandedCategory] = useState(null);
+
+  const handleCategoryClick = (category) => {
+    setExpandedCategory(expandedCategory === category ? null : category);
+  };
 
   return (
     <div className={`navbar ${isMenuOpen ? "menu-open" : ""}`}>
@@ -28,27 +28,28 @@ const Navbar = () => {
       </button>
       <div className="nav-search">
         <img src={searchIcon} alt="Pesquisa" className="nav-icon" />
-</div>
+      </div>
       {/* Logo no centro */}
       <div className="nav-logo">
         <img src={logobranco} alt="Logo Bebecê" />
       </div>
 
-       {/* Right Icons */}
-       <div className="nav-right">
+      {/* Right Icons */}
+      <div className="nav-right">
         <Link to="/perfil">
           <img src={profileIcon} alt="Perfil" className="nav-icon" />
         </Link>
         <Link to="/carrinho">
           <div className="nav-cart">
             <img src={cartIcon} alt="Carrinho" className="nav-icon" />
-            <span className={`cart-count ${cartItems.length > 0 ? "show" : ""}`}>
+            <span
+              className={`cart-count ${cartItems.length > 0 ? "show" : ""}`}
+            >
               {cartItems.length}
             </span>
           </div>
         </Link>
       </div>
-
 
       {/* Menu lateral */}
       <div className={`side-menu ${isMenuOpen ? "open" : ""}`}>
@@ -66,7 +67,25 @@ const Navbar = () => {
         {/* Opções do menu */}
         <ul className="menu-list">
           <li>Liquida</li>
-          <li>Sapatos</li>
+          <li>
+            <div
+              className="menu-item"
+              onClick={() => handleCategoryClick("Sapatos")}
+            >
+              Sapatos{" "}
+              <span>{expandedCategory === "Sapatos" ? "▾" : "▸"}</span>
+            </div>
+            {expandedCategory === "Sapatos" && (
+              <ul className="submenu-list">
+                <li>Scarpins</li>
+                <li>Mocassim</li>
+                <li>Sapatilhas</li>
+                <li>Mules</li>
+                <li>Peep Toe</li>
+                <li>Oxford</li>
+              </ul>
+            )}
+          </li>
           <li>Sandálias</li>
           <li>Botas</li>
           <li>Tênis</li>

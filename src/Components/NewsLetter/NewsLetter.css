@@ -127,3 +127,37 @@ body {
     margin-top: 20px;
   }
 }
+/* Seção do Cupom */
+.coupon-section {
+  text-align: center;
+}
+
+.coupon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.coupon-code {
+  padding: 10px 20px;
+  background-color: #ffe9dc;
+  color: #b11b26;
+  font-weight: bold;
+  border: 1px dashed #b11b26;
+  border-radius: 4px;
+}
+
+.copy-button {
+  padding: 10px 20px;
+  background-color: #b11b26;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  background-color: #555;
+}

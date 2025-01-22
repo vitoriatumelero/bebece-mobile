@@ -1,0 +1,22 @@
+.location-bar {
+    position: fixed;
+    top: 0;
+    height: 20px;
+    width: 335px;
+    background-color: #B11B26;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 400;
+  }
+  
+  .location-bar button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  

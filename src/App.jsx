@@ -5,27 +5,54 @@ import Navbar from './Components/Assets/Navbar/Navbar';
 import Carrinho from './Pages/Carrinho';
 import Item from './Pages/Item';
 import Produtos from './Pages/Produtos';
-import CepModal from './Components/Assets/CepModal/CepModal'; // Importe o modal de CEP
+import CepModal from './Components/Assets/CepModal/CepModal';
+import LocationBar from './Components/Assets/LocationBar/LocationBar'; 
 
 const AppContent = () => {
-  const location = useLocation(); // Hook dentro do componente funcional
-  const [isCepModalOpen, setIsCepModalOpen] = useState(false); // Estado para controlar o modal de CEP
+  const location = useLocation();
+  const [isCepModalOpen, setIsCepModalOpen] = useState(false);
+  const [userLocation, setUserLocation] = useState(null); // Estado para a localização do usuário
 
   useEffect(() => {
-    // Lógica para exibir o modal apenas na primeira visita
-    const savedCep = localStorage.getItem("cep");
+    // Exibir o modal apenas na primeira visita
+    const savedCep = localStorage.getItem('cep');
     if (!savedCep) {
       setIsCepModalOpen(true);
+    } else {
+      setUserLocation(savedCep); // Configurar a localização com o CEP salvo
     }
   }, []);
 
+  const handleSaveLocation = (location) => {
+    localStorage.setItem('cep', location);
+    setIsCepModalOpen(false); // Fecha o modal
+  };
+  
+
+  const handleChangeLocation = () => {
+    setIsCepModalOpen(true); // Reabrir o modal
+  };
+
   return (
     <>
-      {/* Modal de CEP */}
-      <CepModal isOpen={isCepModalOpen} onClose={() => setIsCepModalOpen(false)} />
+      {/* Barra de localização */}
+      {userLocation && (
+        <LocationBar
+          location={userLocation}
+          onChangeLocation={handleChangeLocation}
+        />
+      )}
 
-      {/* Navbar só será exibida se não estivermos na rota "/carrinho" */}
-      {location.pathname !== "/carrinho" && <Navbar />}
+      {/* Modal de CEP */}
+      <CepModal
+        isOpen={isCepModalOpen}
+        onClose={() => setIsCepModalOpen(false)}
+        onSave={handleSaveLocation} // Use a função handleSaveLocation corretamente aqui
+/>
+
+
+      {/* Navbar */}
+      {location.pathname !== '/carrinho' && <Navbar />}
 
       <Routes>
         <Route path="/" element={<Produtos />} />
