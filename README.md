@@ -42,11 +42,3 @@ npm start
 
 Abra http://localhost:3000 para visualizar no navegador.
 
-
-### *Agradecimentos*
-
-Agradeço à equipe da **We Code** por me proporcionar a oportunidade de realizar este trabalho. Foi uma experiência enriquecedora, onde aprendi muito durante todo o processo de desenvolvimento. Sinto-me orgulhosa do resultado final e espero que tenham gostado do projeto.  
-
-Espero também que este trabalho tenha demonstrado como posso contribuir para a equipe e agregar valor à empresa.  
-
-Sinta-se à vontade para contribuir ou deixar um feedback!
